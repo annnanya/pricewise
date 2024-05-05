@@ -1,4 +1,5 @@
 "use client"
+import { scrapeAndStoreProduct } from "@/lib/action";
 import { FormEvent, useState } from "react"
 import { toast } from "react-toastify";
 const isValidAmazonProductURL = (url: string) => {
@@ -19,14 +20,15 @@ const SearchBar = () => {
     const [searchPrompt, setSearchPrompt] = useState('')
     const [isLoading, setIsLoading] = useState(false)
 
-    const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+    const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         const isValidLink = isValidAmazonProductURL(searchPrompt);
         if (!isValidLink)
             toast.error('Please provide a valid link!')
 
         try {
-            setIsLoading(true)
+            setIsLoading(true);
+            const product = await scrapeAndStoreProduct(searchPrompt);
         }
         catch (error) {
             console.error(error);
