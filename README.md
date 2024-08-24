@@ -1,17 +1,36 @@
-# Pricewise
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-Price Wise is a web application designed to assist users in tracking product prices and searching for products. It provides a streamlined user interface with components like a search bar, product cards, and price tracking functionality. Users can receive email notifications for price changes through an integrated email system. The application includes a cron job for daily price updates and utilizes web scraping to gather product details from online stores. With a focus on user experience, Price Wise offers a practical solution for savvy shoppers looking to stay informed about the best deals.
+## Getting Started
 
-## 📦 Features
+First, run the development server:
 
-|     | Feature             | Description                                                                                                           |
-| --- | ------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| ⚙️  | **Architecture**    | Built with Next.js, the app includes API endpoints for product search and cron jobs, with client-side components.     |
-| 📄  | **Documentation**   | In-depth documentation for setup and usage instructions.                                                              |
-| 🔗  | **Dependencies**    | Uses popular libraries like Next.js, React, Mongoose, nodemailer, and TailwindCSS for building a full-stack app.      |
-| 🧩  | **Modularity**      | Code is fairly modular with separate directories for API, components, utilities, and models to handle distinct tasks. |
-| ⚡️ | **Performance**     | Performance considerations include Next.js for optimized image loading and server-side rendering, incremental builds. |
-| 🔐  | **Security**        | No explicit security features mentioned; relies on Next.js for secure defaults and Mongoose for data validation.      |
-| 🔀  | **Version Control** | Git is implied for version control through the repository link; no specific strategies or tools are outlined.         |
-| 🔌  | **Integrations**    | Email notification system and scraper indicate integration with email services and Amazon for product data.           |
-| 📶  | **Scalability**     | Next.js framework supports scalability; no specific architectural patterns mentioned for handling significant growth. |
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
