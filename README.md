@@ -2,8 +2,8 @@
 
 **Pricewise** is a web application designed to assist users in tracking product prices and searching for products. It provides a streamlined user interface with components like a search bar, product cards, and price tracking functionality. Users can receive email notifications for price changes through an integrated email system. The application includes a cron job for daily price updates and utilizes web scraping to gather product details from online stores. With a focus on user experience, Pricewise offers a practical solution for savvy shoppers looking to stay informed about the best deals.
 
-<img src="./images/home.png" alt="Home Page" width="800px">
-<img src="./images/trending.png" alt="Trending Page" width="800px">
+<img src="./images/home.png" alt="Home Page" width="820px">
+<img src="./images/trending.png" alt="Trending Page" width="820px">
 
 ## 📦 Features
 
@@ -25,8 +25,8 @@
 - **Track Prices**: Add products to track their price changes over time.
 - **Email Notifications**: Receive email alerts for price drops.
 
-<img src="./images/product.png" alt="Product Page" width="800px">
-<img src="./images/email.png" alt="Email Page" width="800px">
+<img src="./images/product.png" alt="Product Page" width="820px">
+<img src="./images/email.png" alt="Email Page" width="820px">
 
 ## 🧩 Development
 
