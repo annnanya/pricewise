@@ -22,11 +22,13 @@ export async function scrapeAmazonProduct(url: string) {
     port,
     rejectUnauthorized: false,
   }
+  debugger
 
   try {
     // Fetch the product page
     const response = await axios.get(url, options);
     const $ = cheerio.load(response.data);
+    debugger
 
     // Extract the product title
     const title = $('#productTitle').text().trim();
@@ -80,6 +82,7 @@ export async function scrapeAmazonProduct(url: string) {
 
     return data;
   } catch (error: any) {
+    debugger;
     console.log(error);
   }
 }

@@ -2,6 +2,7 @@
 import { scrapeAndStoreProduct } from "@/lib/actions";
 import { FormEvent, useState } from "react"
 import { toast } from "react-toastify";
+import { useRouter } from "next/navigation";
 const isValidAmazonProductURL = (url: string) => {
     try {
         const parsedURL = new URL(url);
@@ -19,6 +20,7 @@ const isValidAmazonProductURL = (url: string) => {
 const SearchBar = () => {
     const [searchPrompt, setSearchPrompt] = useState('')
     const [isLoading, setIsLoading] = useState(false)
+    let router = useRouter()
 
     const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
@@ -29,6 +31,11 @@ const SearchBar = () => {
         try {
             setIsLoading(true);
             const product = await scrapeAndStoreProduct(searchPrompt);
+
+            if (product && product._id) {
+                // Navigate to the product page
+                router.push(`/products/${product._id}`);
+            }
         }
         catch (error) {
             console.error(error);

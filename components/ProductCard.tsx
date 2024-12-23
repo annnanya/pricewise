@@ -1,3 +1,4 @@
+import { formatNumber } from '@/lib/utils';
 import { Product } from '@/types';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -8,6 +9,7 @@ interface Props {
 }
 
 const ProductCard = ({ product }: Props) => {
+
     return (
         <Link href={`/products/${product._id}`} className="product-card">
             <div className="product-card_img-container">
@@ -30,7 +32,7 @@ const ProductCard = ({ product }: Props) => {
 
                     <p className="text-black text-lg font-semibold">
                         <span>{product?.currency}</span>
-                        <span>{product?.currentPrice}</span>
+                        <span>{formatNumber(product?.currentPrice)}</span>
                     </p>
                 </div>
             </div>
